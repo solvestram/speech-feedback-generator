@@ -14,8 +14,7 @@ class IbmSpeechRecognizer:
         )
 
         # Set service url
-        self._speech_to_text.set_service_url(
-            'https://api.eu-gb.speech-to-text.watson.cloud.ibm.com/instances/639cbc04-9ef1-44cc-b605-1d920852fd51')
+        self._speech_to_text.set_service_url(os.environ['IBM_STT_SERVICE_URL'])
 
         # Set default headers
         self._speech_to_text.set_default_headers(
